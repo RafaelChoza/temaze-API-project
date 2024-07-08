@@ -239,7 +239,7 @@ const searchMovie = async () => {
             moviesGrid.innerHTML = "";
 
             for (const show of shows) {
-                const showCard = createMovie(show);
+                const showCard = createMovie(show.show);
                 moviesGrid.appendChild(showCard);
             }
             

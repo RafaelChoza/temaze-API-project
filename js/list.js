@@ -31,7 +31,7 @@ const createMovie = (show) => {
     show.genres.forEach(genre => {
         const genreSpan = document.createElement("span");
         genreSpan.classList.add("genre");
-        genreSpan.textContent = show.genres ? show.genres: "N/A";
+        genreSpan.textContent = show.genres;
         genresDivGenres.appendChild(genreSpan);
     });
 

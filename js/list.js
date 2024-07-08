@@ -234,7 +234,6 @@ const searchMovie = async () => {
             
             const shows = response.data;
             console.log(shows);
-            console.log(shows.show.genres);
 
             moviesGrid.innerHTML = "";
 

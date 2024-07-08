@@ -169,7 +169,7 @@ const loadAllShows = async () => {
     const totalOfMovies = document.querySelector(".movies__perLetter");
     const totalOfMoviesQty = showsOrdered.length;
     const totalOfMoviesFormated = totalOfMoviesQty.toLocaleString('en-US', {
-       minimumFractionDigits: 2,
+       minimumFractionDigits: 0,
        maximumFractionDigits: 2
    });
     totalOfMovies.textContent = `Total of movies are ${totalOfMoviesFormated}`;
@@ -195,7 +195,7 @@ const loadAllShows = async () => {
         const filteredShows = showsOrdered.filter(show => show.name[0].toUpperCase() === letter);
         const qty = filteredShows.length;
         const formatedQty = qty.toLocaleString('en-US', {
-       minimumFractionDigits: 2,
+       minimumFractionDigits: 0,
        maximumFractionDigits: 2
    });
         filteredShows.forEach((show, index) => {

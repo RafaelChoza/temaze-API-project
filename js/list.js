@@ -167,7 +167,12 @@ const loadAllShows = async () => {
 
     console.log(showsOrdered.length)
     const totalOfMovies = document.querySelector(".movies__perLetter");
-    totalOfMovies.textContent = `Total of movies are ${showsOrdered.length}`;
+    const totalOfMoviesQty = showsOrdered.length;
+    const totalOfMoviesFormated = totalOfMoviesQty.toLocaleString('en-US', {
+       minimumFractionDigits: 2,
+       maximumFractionDigits: 2
+   });
+    totalOfMovies.textContent = `Total of movies are ${totalOfMoviesFormated}`;
 
     const ABC = "ABCDEFGHIJKLMNOPQRSTUVWXYZ#";
     const arrayABC = ABC.split("");
@@ -189,12 +194,16 @@ const loadAllShows = async () => {
         listGrid.innerHTML = "";
         const filteredShows = showsOrdered.filter(show => show.name[0].toUpperCase() === letter);
         const qty = filteredShows.length;
+        const formatedQty = qty.toLocaleString('en-US', {
+       minimumFractionDigits: 2,
+       maximumFractionDigits: 2
+   });
         filteredShows.forEach((show, index) => {
             const listMovies = createListMovies(show, index);
             listGrid.appendChild(listMovies);
         });
         const QtyPerLetter = document.querySelector(".movies__perLetter");
-        QtyPerLetter.textContent = `Quantity of Movies start with "${letter}" are ${qty}`;
+        QtyPerLetter.textContent = `Quantity of Movies start with "${letter}" are ${formatedQty}`;
 
         const moviesNamesNodeList = document.querySelectorAll(".movie__name");
         moviesNamesNodeList.forEach(movieName => {

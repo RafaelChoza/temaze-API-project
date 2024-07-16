@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Imprima&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles3.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <title>PELICULONES LIST</title>
+</head>
+<body>
+    <header>
+        <i><img class="menu__icono" src="img/menuIcono.png" alt=""></i>
+        <img class="main__logoList" src="img/menuImg.png" alt="mainLogo">
+    </header>
+
+    <div class="search__div">
+        <input id="input__text" type="text">
+        <button id="search__buttonList">SEARCH</button>
+    </div>
+
+    <h1>MOVIES LIST PER GENDER</h1>
+    <h2>Click on the gender to see the movies/series</h2>
+
+    <div class="genres__menu">
+
+    </div>
+    <div class="div__qtyMovies">
+        <p class="movies__perGenre"></p>
+    </div>
+
+    
+
+    <div class="list__container">
+        <div class="spinner-container">
+            <p>Loading, Please Wait</p>
+            <p>This may take some seconds</p>
+            <div class="spinner"></div>
+        </div>
+        
+
+    </div>
+
+    <div class="pagination__container">
+        <div>
+            <span class="genre__selected"></span>
+        </div>
+
+        <div>
+            <button id="prev__page" disabled>&laquo; Previous</button>
+            <span id="current__page">1</span>
+            <span>of</span>
+            <span id="total__pages"></span>
+            <button id="next__page">Next &raquo;</button>
+        </div>
+        <div>
+            <span>pages</span>
+        </div>
+            
+    </div>
+
+    <div class="menu">
+        
+
+        <div class="icono__close">
+            <p>X  Close</p>
+        </div>
+
+        <div class="menu__content">
+            <div>
+                <h1>MENU</h1>
+            </div>
+
+            <div>
+                <i><p class="icono__main">MAIN PAGE</p></i>
+                <i><p class="icono__letter">MOVIES PER LETTER</p></i>
+                <i><p class="icono__country">MOVIES PER COUNTRY</p></i>
+            </div>
+
+            <div>
+                <img class="main__logoMenu" src="img/menuImg.png" alt="mainLogo">
+            </div>
+        </div>    
+    </div>
+
+    <img id="scrollToTopBtn" src="img/scrollTop.png"><i class="fas fa-arrow-up"></i></img>
+<script src="js/genres.js"></script>      
+</body>
+</html>
